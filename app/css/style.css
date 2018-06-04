@@ -1,0 +1,189 @@
+html, body {
+    height: 100%;
+    text-align: center;
+    background-color: rgb(247, 222, 247)
+  }
+  
+  body {
+    height:100%;
+  }
+  
+  #albums-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #logo {
+    height: 200px;
+    width: 200px;
+    margin-top: 0;
+  }
+  
+  .form-group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+  
+  .form-inline {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .input-group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  input#formBasicText.form-control{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .form-control .has-feedback {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:45%;
+  }
+  
+  input[placeholder] {
+    text-align: center;
+  }
+  
+  .submitBtn {
+    background-color: #9ebaf5;
+  }
+  
+  .gridContainer {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:875px;
+  }
+  
+  /*****CSS for Grid **********/
+  
+  .coverAlbum {
+    height:100px;
+    width:100px;
+    display: inline-block;
+    margin:10px 0 0 2%;
+    height:100px;
+    opacity: 1;
+  }
+  
+  /*****CSS for album in grid *****/
+  
+  @media only screen and (max-width: 700px) {
+    .coverAlbum {
+      width: 20%;
+    }
+    input#formBasicText.form-control {
+      max-width: 80%;
+    }
+    .gridContainer{
+      max-width: 700px;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .coverAlbum {
+      width: 20%;
+    }
+    input#formBasicText.form-control {
+      max-width: 80%;
+    }
+    .gridContainer{
+      max-width: 500px;
+    }
+  }
+  
+  /****************** MODAL CSS************************ MODAL CSS *******************/
+  
+  /* Style the Image Used to Trigger the Modal */
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    opacity: 1;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(122, 119, 119); /* Fallback color */
+    background-color: rgba(155, 111, 111, 0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: inline-block;
+    width: 350px;
+    max-width: 350px;
+    max-height: 350px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  .caption {
+    margin: auto;
+    display: inline-block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: rgb(212, 208, 182);
+    padding: 10px 0;
+    font-size:35px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
